@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Agro-Alert</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .faq-question {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            cursor: pointer; /* Make questions clickable */
+        }
+
+        .faq-answer {
+            margin-bottom: 1rem;
+            display: none; /* Hide answers by default */
+            padding-left: 1.5rem;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block; /* Show answer when parent is active */
+        }
+        .faq-item {
+            margin-bottom: 1.5rem; /* Add spacing between FAQ items */
+            border-bottom: 1px solid #444; /* Add a separator line */
+            padding-bottom: 1rem; /* Add padding below the separator */
+        }
+        .faq-item:last-child{
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Agro-Alert</a>
+            <button class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="testplan.html" class="nav-link">Test Plan</a></li>
+                <li><a href="download.html" class="nav-link">Download App</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="nav-spacer"></div>
+        <section class="container">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">What is Agro-Alert?</div>
+                    <div class="faq-answer">Agro-Alert is a system designed to monitor environmental conditions relevant to agriculture, such as temperature, humidity, light intensity, and soil moisture. It provides real-time data and alerts to help optimize crop growth.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How does Agro-Alert work?</div>
+                    <div class="faq-answer">Agro-Alert uses sensors to collect data from the environment. This data is then transmitted to a central system, where it is processed and displayed on a user-friendly dashboard. Users can access this dashboard through a web browser or mobile app.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">What sensors are used?</div>
+                    <div class="faq-answer">The system uses a combination of temperature and humidity sensors, light-dependent resistors (LDRs) for light intensity, and soil moisture sensors.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Is there a mobile app available?</div>
+                    <div class="faq-answer">Yes, there is a mobile app available for both Android and iOS devices. You can download it from the <a href="download.html">Download App</a> page.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How can I download the data?</div>
+                    <div class="faq-answer">You can download the sensor data in CSV format from the dashboard page. There is a "Download CSV" button available.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How often is the data updated?</div>
+                    <div class="faq-answer">The data is updated regularly, ensuring you have access to near real-time information about your environment. The exact update frequency depends on the configuration of the sensor system.</div>
+                </div>
+                 <div class="faq-item">
+                    <div class="faq-question">Who do I contact for support?</div>
+                    <div class="faq-answer">For support or any questions, please contact us at support@agroalert.com</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <center><p>&copy; 2023 Agro-Alert</p></center>
+    </footer>
+
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+    <script src="nav.js"></script>
+</body>
+</html>

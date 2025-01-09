@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro-Alert</title>
+    <style>
+        /* style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #282c34;
+    color: #f0f0f0;
+    line-height: 1.6;
+    display: flex; /* Make body a flex container */
+    flex-direction: column; /* Stack header, main, footer vertically */
+    min-height: 100vh; /* Ensure body takes up full viewport height */
+}
+
+header {
+    text-align: center;
+    padding: 3rem 0; /* Increased padding */
+    background-color: #333;
+    border-bottom: 1px solid #444;
+}
+
+h1 {
+    margin: 0;
+    color: #61dafb;
+    font-size: 3rem; /* Larger title */
+}
+
+main {
+    flex-grow: 1; /* Allow main to take up available space */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 2rem;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 2rem;
+    max-width: 800px; /* Limit container width */
+    width: 90%; /* Take up 90% of parent width */
+    margin: 0 auto; /* Center the container */
+}
+
+.button {
+    display: block; /* Make links block elements */
+    background-color: #444;
+    color: #f0f0f0;
+    text-decoration: none;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+}
+
+.button:hover {
+    background-color: #555;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Media Queries (for very small screens, make buttons stack fully) */
+@media screen and (max-width: 500px) {
+    .button-container {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Agro-Alert</h1>
+    </header>
+
+    <main>
+        <section class="button-container">
+            <a href="dashboard.html" class="button">Dashboard</a>
+            <a href="faq.html" class="button">FAQ</a>
+            <a href="testplan.html" class="button">Test Plan</a>
+            <a href="download.html" class="button">Download App</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Agro-Alert</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download App - Agro-Alert</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .download-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        }
+
+        .download-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #61dafb;
+            color: #282c34;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-button:hover {
+            background-color: #4fa3d1;
+            transform: scale(1.05); /* Slightly enlarge on hover */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .app-icon {
+            max-width: 200px; /* Adjust as needed */
+            display: block;
+            margin: 0 auto 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Agro-Alert</a>
+            <button class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="testplan.html" class="nav-link">Test Plan</a></li>
+                <li><a href="download.html" class="nav-link">Download App</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="nav-spacer"></div>
+        <section class="container">
+            <h2>Download the Agro-Alert App</h2>
+            <p>Download our app for convenient access to your sensor data on the go.</p>
+
+            <img src="icon.png" alt="App Icon" class="app-icon">
+
+            <div class="download-links">
+                <a href="app.apk" class="download-button" download>Download for Android</a>
+            </div>
+            <p>If you have any issues with downloading or installing the app, please refer to the <a href="faq.html">FAQ</a>.</p>
+        </section>
+    </main>
+    <footer>
+        <center><p>&copy; 2023 Agro-Alert</p></center>
+    </footer>
+    <script src="nav.js" defer></script>
+</body>
+</html>

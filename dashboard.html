@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23314 Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Agro-Alert</a>
+            <button class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="testplan.html" class="nav-link">Test Plan</a></li>
+                <li><a href="download.html" class="nav-link">Download App</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="nav-spacer"></div>
+        <header>
+            <h1>23314 Dashboard</h1>
+        </header>
+        <section class="container">
+            <div class="dashboard-container">
+                <h2>Sensor Readings</h2>
+                <div class="dashboard">
+                    <div class="dashboard-item">
+                        <h3>Temperature</h3>
+                        <p id="temperature">Loading...</p>
+                    </div>
+                    <div class="dashboard-item">
+                        <h3>Humidity</h3>
+                        <p id="humidity">Loading...</p>
+                    </div>
+                    <div class="dashboard-item">
+                        <h3>Light Intensity</h3>
+                        <p id="lightIntensity">Loading...</p>
+                    </div>
+                    <div class="dashboard-item">
+                        <h3>Soil Moisture</h3>
+                        <p id="soilMoisture">Loading...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="charts-container">
+                <h2>Sensor Charts</h2>
+                <canvas id="temperatureChart"></canvas>
+                <canvas id="humidityChart"></canvas>
+                <canvas id="lightIntensityChart"></canvas>
+                <canvas id="soilMoistureChart"></canvas>
+            </div>
+        </section>
+        <div class="download-container">
+        <button id="downloadButton">Download CSV</button>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.1/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment"></script>
+    <script src="script.js"></script>
+    <script src="nav.js"></script>
+    <footer>
+        <center><p>&copy; 2023 Agro-Alert</p></center>
+    </footer>
+</body>
+</html>

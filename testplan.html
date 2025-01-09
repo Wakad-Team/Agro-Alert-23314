@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Plan - Agro-Alert</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 20px auto; /* Center the video */
+        }
+
+        .video-container iframe,
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Agro-Alert</a>
+            <button class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="testplan.html" class="nav-link">Test Plan</a></li>
+                <li><a href="download.html" class="nav-link">Download App</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="nav-spacer"></div>
+        <section class="container">
+            <h2>Test Plan and Demonstration</h2>
+            <p>Here you can find a demonstration video of the Agro-Alert system.</p>
+
+            <div class="video-container">
+                <video controls>
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <center><p>&copy; 2023 Agro-Alert</p></center>
+    </footer>
+    <script src="nav.js"></script>
+</body>
+</html>
