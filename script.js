@@ -29,8 +29,8 @@ const updateDashboard = (data) => {
         const lastDataPoint = data[data.length - 1];
         document.getElementById('temperature').innerText = `${lastDataPoint.temperature} °C`;
         document.getElementById('humidity').innerText = `${lastDataPoint.humidity} %`;
-        document.getElementById('lightIntensity').innerText = `${lastDataPoint.ldr} %`;
-        document.getElementById('soilMoisture').innerText = `${lastDataPoint.soilMoisture} %`;
+        document.getElementById('lightIntensity').innerText = `${lastDataPoint.LDR_Percentage} %`;
+        document.getElementById('soilMoisture').innerText = `${lastDataPoint.soilMoisturePercent} %`;
     }
 };
 
@@ -45,8 +45,8 @@ const renderCharts = (data) => {
     const timestamps = recentData.map(item => moment(item.timestamp));
     const temperatureData = recentData.map(item => item.temperature);
     const humidityData = recentData.map(item => item.humidity);
-    const lightIntensityData = recentData.map(item => item.ldr);
-    const soilMoistureData = recentData.map(item => item.soilMoisture);
+    const lightIntensityData = recentData.map(item => item.LDR_Percentage);
+    const soilMoistureData = recentData.map(item => item.soilMoisturePercent);
 
     const chartOptions = {
         responsive: true,
